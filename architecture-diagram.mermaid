@@ -1,0 +1,39 @@
+flowchart TD
+    subgraph Client
+        A[Next.js App] --> B[React Components]
+        B --> C[Web Workers]
+        B --> D[React-Konva Canvas]
+        B --> E[User Input Forms]
+        B --> F[AI Chat Interface]
+    end
+    
+    subgraph Server
+        G[Next.js API Routes] --> H[Authentication]
+        G --> I[Lunar Calculations]
+        G --> J[Tử Vi Engine]
+        G --> K[OpenAI Integration]
+        G --> L[User Data Storage]
+        
+        J --> M[Lunar Calendar Converter]
+        J --> N[Star Placement Algorithm]
+        J --> O[Interpretation Engine]
+        
+        K --> P[Prompt Engineering]
+        K --> Q[Context Management]
+    end
+    
+    subgraph Database
+        R[(User Profiles)]
+        S[(Saved Charts)]
+        T[(Interpretation Templates)]
+    end
+    
+    subgraph External
+        U[OpenAI API]
+        V[lunar-typescript]
+    end
+    
+    A <--> G
+    G <--> Database
+    J <--> V
+    K <--> U
